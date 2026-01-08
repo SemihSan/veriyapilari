@@ -170,30 +170,17 @@ class ReservationSystem:
     """
     
     def __init__(self):
-        # Salonlar (AVL Tree ile indeksleme)
         self._rooms: Dict[str, Room] = {}
-        self._room_tree = AVLTree()  # room_id -> Room
+        self._room_tree = AVLTree()
         
-        # Rezervasyonlar (AVL Tree ile indeksleme)
         self._reservations: Dict[str, Reservation] = {}
-        self._reservation_tree = AVLTree()  # reservation_id -> Reservation
+        self._reservation_tree = AVLTree()
         
-        # Her salon için Interval Tree (çakışma kontrolü)
         self._room_intervals: Dict[str, IntervalTree] = {}
-        
-        # Öncelik kuyruğu (bekleyen rezervasyonlar için)
         self._pending_queue = PriorityQueue(min_priority=True)
-        
-        # Salon bağlantı grafı
         self._building_graph = Graph(directed=False)
-        
-        # Undo/Redo yöneticisi
         self._undo_manager = UndoRedoManager(max_history=100)
-        
-        # Bekleme listesi
         self._waiting_list = WaitingList(on_available=self._notify_waiting_customer)
-        
-        # İşlem geçmişi
         self._action_log: List[dict] = []
     
     # ==================== SALON YÖNETİMİ ====================

@@ -1,12 +1,12 @@
 # Salon Rezervasyon Sistemi
 
-Veri Yapıları ve Algoritmalar Dersi Projesi
+Veri Yapıları Dersi Projem
 
-## 📋 Proje Hakkında
+## Proje hk
 
 Bu proje, bir salon/toplantı odası rezervasyon sistemi uygulamasıdır. Sistemde çeşitli veri yapıları ve algoritmalar kullanılarak verimli bir şekilde rezervasyon yönetimi sağlanmaktadır.
 
-## 🏗️ Kullanılan Veri Yapıları
+## Kullanılan veri yapiları
 
 ### 1. Dengeli Arama Ağacı (AVL Tree)
 - **Dosya:** `data_structures/avl_tree.py`
@@ -58,7 +58,7 @@ Bu proje, bir salon/toplantı odası rezervasyon sistemi uygulamasıdır. Sistem
 - **Amaç:** Dinamik bekleme listesi yönetimi
 - **Karmaşıklık:** O(1) - append/prepend, O(n) - search/delete
 
-## 📁 Dosya Yapısı
+## Dosya Yapısı
 
 ```
 salon_rezervasyon/
@@ -76,7 +76,7 @@ salon_rezervasyon/
 ├── cli.py                   # Komut satırı arayüzü
 ├── performance_analysis.py   # Karmaşıklık analizi
 ├── main.py                  # Giriş noktası
-└── README.md                # Bu dosya
+└── calisma.md                # Bu dosya
 ```
 
 ## 🚀 Kullanım
@@ -107,7 +107,7 @@ python main.py --test
 python main.py --benchmark
 ```
 
-## 📊 Karmaşıklık Tablosu
+## Karmaşıklık Tablosu
 
 ### Zaman Karmaşıklıkları
 
@@ -132,7 +132,7 @@ python main.py --benchmark
 | Binary Search | O(1) | O(log n) | O(log n) | O(1) |
 | Dijkstra | O((V+E) log V) | O((V+E) log V) | O((V+E) log V) | O(V) |
 
-## 💡 Özellikler
+## Özellikler
 
 ### Salon Yönetimi
 - Salon ekleme, düzenleme, silme
@@ -162,7 +162,7 @@ python main.py --benchmark
 - CSV dışa aktarma
 - Yedekleme ve geri yükleme
 
-## 🧪 Test
+## Test
 
 ```bash
 # Tüm testleri çalıştır
@@ -177,7 +177,7 @@ python main.py --test
 # TÜM TESTLER BAŞARILI! ✓
 ```
 
-## 📈 Performans Analizi
+##  Performans Analizi
 
 ```bash
 # Detaylı performans raporu
@@ -189,7 +189,7 @@ Rapor içeriği:
 - Ampirik performans ölçümleri
 - Farklı boyutlar için karşılaştırma
 
-## 🎯 Kullanım Senaryoları
+## nasil kullanilir
 
 ### 1. Yeni Salon Ekleme
 ```
@@ -216,14 +216,8 @@ Ana Menü > 1. Salon Yönetimi > 7. Salon Bağlantıları > 2. En Kısa Yol Bul
 Ana Menü > 7. Geri Al / Yinele > 1. Geri Al
 ```
 
-## 📝 Notlar
 
-- Python 3.8+ gerektirir
-- Harici kütüphane gerektirmez (sadece standart kütüphane)
-- Windows, Linux ve macOS desteklenir
-- ANSI renk kodları ile renkli CLI
-
-## 👨‍💻 Geliştirici Notları
+##  Geliştirici Notları
 
 Her modül bağımsız olarak test edilebilir:
 

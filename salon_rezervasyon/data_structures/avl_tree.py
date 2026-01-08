@@ -74,11 +74,9 @@ class AVLTree:
         x = y.left
         B = x.right
         
-        # Rotasyonu gerçekleştir
         x.right = y
         y.left = B
         
-        # Yükseklikleri güncelle
         self._update_height(y)
         self._update_height(x)
         
@@ -97,11 +95,9 @@ class AVLTree:
         y = x.right
         B = y.left
         
-        # Rotasyonu gerçekleştir
         y.left = x
         x.right = B
         
-        # Yükseklikleri güncelle
         self._update_height(x)
         self._update_height(y)
         
@@ -145,11 +141,9 @@ class AVLTree:
         Zaman Karmaşıklığı: O(log n)
         """
         def _insert(node: Optional[AVLNode], key: Any, value: Any) -> AVLNode:
-            # Boş düğüme ulaştık, yeni düğüm oluştur
             if not node:
                 return AVLNode(key, value)
             
-            # Karşılaştırma yap
             cmp = self._compare(key, node.key)
             
             if cmp < 0:
@@ -157,14 +151,10 @@ class AVLTree:
             elif cmp > 0:
                 node.right = _insert(node.right, key, value)
             else:
-                # Aynı anahtar varsa değeri güncelle
                 node.value = value
                 return node
             
-            # Yüksekliği güncelle
             self._update_height(node)
-            
-            # Dengeyi kontrol et ve düzelt
             return self._rebalance(node, key)
         
         old_size = self.size
